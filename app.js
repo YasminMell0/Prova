@@ -3,11 +3,10 @@ const app = express()
 const handlebars = require("express-handlebars").engine
 const bodyParser = require("body-parser")
 const post = require("./models/post")
-
-app.engine("handlebars", handlebars({defaultLatyout: "main"}))
 app.set("view engine", "handlebars")
 
-app.use(bodyParser.urlencoded({extends: false}))
+app.engine("handlebars", handlebars({defaultLayout: "main"}))
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 
@@ -26,7 +25,7 @@ app.post("/cadastrar", function(req,res){
         estado: req.body.estado
 
     }).then(function(){
-        res.render("cadatro")
+        res.render("cadastro")
     }).catch(function(erro){
         res.send("Falha ao cadastrar os dados: " +erro)
     })
