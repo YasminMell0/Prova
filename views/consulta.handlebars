@@ -3,24 +3,26 @@
         <h1>Tela de Consulta</h1>
         <table class="table">
            <thead>
+             &nbsp;
                     <tr>
-                        <th scope="col">Produto</th>
-                        <th scope="col">Marca</th>
-                        <th scope="col">Modelo </th>
-                        <th scope="col">Descrição</th>
-                        <th scope="col">Palavras Chaves</th>
-                        <th scope="col">Ações</th>
+                        <th scope="col">nome</th>
+                        <th scope="col">endereco</th>
+                        <th scope="col">bairro </th>
+                        <th scope="col">cep </th>
+                        <th scope="col">cidade</th>
+                        <th scope="col">estado</th>
                     </tr>
                 </thead>
                 <tbody >
                 {{#each post}}
                     {{#dataValues}}
                     <tr>
-                        <td>{{produto}}</td>
-                        <td>{{marca}}</td>
-                        <td>{{modelo}}</td>
-                        <td>{{descricao}}</td>
-                        <td>{{palavraschaves}}</td>
+                        <td>{{nome}}</td>
+                        <td>{{endereco}}</td>
+                        <td>{{bairro}}</td>
+                        <td>{{cep}}</td>
+                        <td>{{cidade}}</td>
+                        <td>{{estado}}</td>
                         <td>
                     <td>
                         <button class="btn btn-primary"><a href="/editar/{{id}}">Editar</a></button>
